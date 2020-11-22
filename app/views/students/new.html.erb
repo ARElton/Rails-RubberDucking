@@ -1,0 +1,21 @@
+<h1>Create a New Student </h1>
+
+<% if flash[:errors] %>
+  <ul>
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :mod %>
+  <%= f.number_field :mod %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Student Show Page</h1>
+
+<h2>Name: <%= @student.name %></h2>
+<h2>Mod: <%= @student.mod %> </h2>
+
+<h3>Ducks!</h3>
+
+<% @student.ducks.each do |duck|%>
+<% if duck.student_id == @student.id %>
+<li> <%= duck.name %> </li>
+<% end %>
+<% end %>
+
